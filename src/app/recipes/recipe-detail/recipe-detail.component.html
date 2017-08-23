@@ -1,0 +1,46 @@
+<!--The details of recipe is given in this page which also shows recipes image 
+which is currently not included.
+The list also includes the type of ingrediants used to prepare the recipe-->
+
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="recipedet.imagepath" 
+          alt="{{ recipedet.name}}" 
+          class="img-responsive"
+          style="max-height:200px">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+ <h1>{{recipedet.name}}</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle">
+        Manage recipe 
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#">To shopping list</a></li>
+        <li><a href="#"> Edit recipe</a></li>
+        <li><a href="#">Delect recipe</a></li>
+      </ul>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+   {{ recipedet.description}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+   Ingradiants
+  </div>
+</div>

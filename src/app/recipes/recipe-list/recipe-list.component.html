@@ -1,0 +1,20 @@
+<!--Add the new recipe to the shopping list and also show the name of recipe and
+description image of recipe -->
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success"> New recipe</button>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-xs-12">
+
+       <app-recipe-item *ngFor="let recipeE of recipes"
+                         [rec-ele]="recipeE" 
+                         (rec-sel)= "onrecipeselected(recipeE)" >
+       </app-recipe-item>
+    </div>
+</div>
+

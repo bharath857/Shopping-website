@@ -1,0 +1,20 @@
+<!--This file taken in main file called index file and also this file includes
+two new files called with coulms 5 and 7-->
+<div class="row">
+  <div class="col-md-5" style="background-color:blueviolet;">
+    <app-recipe-list
+                   (recipewasselected)="selectedrecipe=$event" >
+    </app-recipe-list>
+  </div>
+
+
+   <div class="col-md-7">
+     <app-recipe-detail
+                       *ngIf="selectedrecipe; else infotext"
+                       [recipedet]="selectedrecipe" >
+     </app-recipe-detail>
+     <ng-template #infotext>
+       <p> Plese select the Recipe</p>
+     </ng-template>
+   </div>
+</div>
